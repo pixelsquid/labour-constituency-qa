@@ -1,0 +1,423 @@
+@import 'modules/_breakpoints';
+@import 'modules/_typography';
+@import 'modules/_palette';
+@import 'modules/_mq';
+@import 'modules/_fonts';
+@import 'modules/_grid';
+// @import 'modules/_palette';
+// @import 'modules/_grid-system';
+// @import 'modules/_mq';
+// @import 'modules/_side-margins';
+
+$con:    #005789;
+$grn:    #33A22B;
+$lab:    #E31F26;
+$ldem:   #FFB900;
+$others: #B3B3B4;
+$snp:    #FCDD03;
+$ukip:   #7D0069;
+$dup:    $others;
+$pc:     #868686;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Remove <figure> margin
+.interactive {
+    margin: 0 auto;
+    width:100%;
+    // max-width:1300px;
+    text-align: left;
+  padding: 0;
+  margin: 0;
+  color: #333;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  
+  div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  line-height: 1.1em;
+}
+
+#mobile-dummy {
+  position: absolute; 
+  display: block;
+  height: 0;
+  width: 0;
+  
+      @include mq(phablet){
+           display: none;;
+        }
+  
+   }
+
+select:focus { outline: none; }
+
+a {
+  color: #005689;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.gv-transition {
+  transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari and Chrome */
+    -o-transition: all 0.3s; /* Opera */
+}
+
+.gv-notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+}
+
+.qa-text p {
+    font-family: "Guardian Egyptian Web";
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 200;
+    color: #767676;
+}
+
+.interactive {
+    background: #F4F4F4 none repeat scroll 0% 0%;
+    margin: 0px auto;  
+}
+
+figure.element.interactive {
+    margin-top: 0!important;
+    padding-top: 1rem!important;
+}
+
+.interactive #gv-content {
+    background: #ffffff none repeat scroll 0% 0%;
+    margin: 0px auto;
+    padding-top: 12px;
+    
+    .con {
+        background-color: $con!important;
+    }
+    
+     .lab {
+        background-color: $lab!important;
+    }
+    
+    .ldem {
+        background-color: $ldem!important;
+    }
+    
+    .snp {
+        background-color: $snp!important;
+    }
+    
+    .ukip {
+        background-color: $ukip!important;
+    }
+    
+    .pc {
+        background-color: $pc!important;
+    }
+
+}
+
+.interactive #gv-header {
+   padding-bottom: 55px;
+   
+    #gv-filter-block {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  color: #dcdcdc;
+  font-family: Guardian Text Sans Web,Arial,sans-serif;
+}
+
+.gv-styled-select {
+  float: right;
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url("/imgs/dropdown.gif") no-repeat 208px #fff;
+   border: 1px solid #dcdcdc;
+   border-radius: 17px;
+}
+
+.gv-styled-select:hover {
+   background: url("/imgs/dropdown-white.png") no-repeat 208px #dcdcdc;
+}
+
+.gv-styled-select:hover #gv-filter {
+  color: #fff;
+}
+
+#gv-filter {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   line-height: 1.3em;
+   color: #bdbdbd;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+  #gv-filter option {
+   padding: 10px;
+   border-bottom: 1px solid #767676;
+   font-weight: 400;
+   color: #767676;
+   background: #fff;
+   }
+
+   #gv-filter option.separator {
+   border-bottom: 4px solid #767676;
+   }
+}
+
+.interactive #gv-share-container {
+color: #767676;
+ font-family: Guardian Text Sans Web,Arial,sans-serif;
+ 
+ p {
+     display: inline-block;
+     padding-right: 10px;
+ }
+}
+
+.interactive .share-button{
+        width:24px;
+        height:24px;
+        border-radius:40px;
+        border:none;
+        outline: none;
+        background: #333;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor:pointer;
+        background-size:24px;
+        margin-right: 2px;
+     
+        display:inline-block;
+        margin-top:12px;
+        &.share-twitter{
+            background-image: url(/imgs/twitter.svg);
+        }
+        &.share-facebook{
+            background-image: url(/imgs/facebook.svg);
+        }
+        &.share-email{
+            background-image: url(/imgs/mail.svg);
+        }
+        &:hover{
+            background-color:#555;
+        }
+    }
+
+.interactive h1 {
+    font-family: "Guardian Egyptian Web";
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 200;
+    color: #4bc6df;
+    max-width: 780px;
+    strong {
+        font-weight: 800; 
+    }
+    
+    @include mq(mobileLandscape){
+          font-size: 76px;
+    line-height: 76px;
+    }
+    
+  
+}
+
+.interactive h1:after {
+    display: block;
+    max-width: 780px;
+    height: 1px;
+    content:"";
+    border-top: 1px solid #333;
+    margin: 5px 0 10px 0;
+     @include mq(mobileLandscape){
+         margin: 15px 0 10px 0;
+    }
+}
+
+.interactive h2 {
+   font-family: "Guardian Egyptian Web";
+font-size: 21px;
+line-height: 24px;
+font-weight: 200;
+color: #222;
+max-width: 780px;
+
+ @include mq(mobileLandscape){
+          font-size: 27px;
+    line-height: 34px;
+    }
+}
+
+.interactive .qa-text {
+    font-family: "Guardian Egyptian Web";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 200;
+    color: #767676;
+    
+    @include mq(mobileLandscape){
+        font-size: 24px;
+        line-height: 31px;
+    }
+    
+    span.qa-coloured-text {
+        color: #4bc6df;
+        font-weight: 400;
+    }
+      
+}
+
+.interactive h5.qa-text { 
+    color: #333;
+    font-weight: 300;
+    padding-bottom: 10px;
+    padding-top: 4px;
+}
+
+.interactive h7.qa-text { 
+    display: block;
+    font-weight: 300;
+    padding-bottom: 0;
+    margin-bottom: -5px;
+}
+
+.interactive .gv-consituency-quote-block {
+    position: relative;
+    padding: 10px 0 40px 0;
+    cursor: pointer;
+    background: #fff;
+    border-bottom: 1px dotted #dcdcdc;
+    overflow: hidden;
+    
+    .qa-left-col {
+        
+        display: none;
+        
+         @include mq(mobileLandscape){
+        display: block;
+        width: 15%;
+        float: left;
+        
+         }
+        
+    }
+    
+     .qa-right-col {
+          
+          @include mq(mobileLandscape){
+        width: 82%;
+        float: right;
+        overflow: hidden;
+          }
+       
+    }
+    
+    
+    
+    .qa-locator-map {
+        width: 100%;
+    }
+    
+    .gv-info-text {
+        font-family: Guardian Text Sans Web,Arial,sans-serif;
+        font-size: 16px;
+         color: #bdbdbd;
+          padding-top: 10px;
+         padding-bottom: 20px;
+         line-height: 1.3em;
+         font-weight: 400;
+         
+          @include mq(mobileLandscape){
+        font-size: 18px;
+    }
+         
+         strong {
+             font-weight: 800;
+             color: #bdbdbd;
+         }
+    }
+    
+    .gv-fullquote {
+        height: 0;
+        overflow: hidden;
+    }
+    
+    strong {
+        font-weight: 500;
+    }
+    
+    &:hover {
+        // background: #edf9fc;
+    }
+    
+    &.gv-expanded {
+    .gv-fullquote {
+         height: auto;
+         padding-top: 10px;
+    }
+    .gv-more {
+         display: none;
+    }
+    .gv-info-text {
+        display: block;
+    }
+    &:hover {
+        background: #fff;
+    }
+    
+}
+
+}
+
+
+// .interactive .gv-consituency-quote-block:before {
+//     position: absolute;
+//     top: 0;
+//     left:-50px;
+//     width: 50px;
+//     height: 50px;
+//     background: #000;
+// }
